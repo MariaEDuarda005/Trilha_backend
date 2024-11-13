@@ -1,4 +1,4 @@
-package br.ETS.Feedback.infra;
+package br.ETS.Feedback.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;

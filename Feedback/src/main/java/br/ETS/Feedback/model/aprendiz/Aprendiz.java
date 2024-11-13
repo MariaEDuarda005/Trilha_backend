@@ -28,7 +28,7 @@ public class Aprendiz {
     @Enumerated(EnumType.STRING)
     private Curso curso;
 
-    @Embedded // vai ser links a tabela instrutor com a de informações
+    @Embedded // vai ser links a tabela aprendiz com a de informações
     private InformacoesAprendiz informacoesAprendiz;
 
     private Boolean ferias;

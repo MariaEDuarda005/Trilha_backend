@@ -20,3 +20,10 @@ alter table tb_instrutores add column ferias bit;
 
     alter table tb_instrutores 
        modify column id integer not null auto_increment;
+
+    create table tb_usuario (
+        id integer not null auto_increment,
+        login varchar(255),
+        senha varchar(255),
+        primary key (id)
+    ) engine=InnoDB;

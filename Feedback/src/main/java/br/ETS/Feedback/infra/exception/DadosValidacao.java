@@ -1,4 +1,4 @@
-package br.ETS.Feedback.infra;
+package br.ETS.Feedback.infra.exception;
 
 import org.springframework.validation.FieldError;
 
