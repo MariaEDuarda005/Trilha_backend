@@ -1,4 +1,4 @@
-package br.ETS.Feedback.model.usuario;
+package br.ETS.Feedback.model.usuario.DTO;
 
 import jakarta.validation.constraints.NotNull;
 

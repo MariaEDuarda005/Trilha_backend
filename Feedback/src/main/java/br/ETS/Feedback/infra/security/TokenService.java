@@ -4,6 +4,7 @@ import br.ETS.Feedback.model.usuario.Usuario;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -23,6 +24,19 @@ public class TokenService {
                     .sign(algorithm);
         } catch (JWTCreationException exception){
             throw new RuntimeException(exception);
+        }
+    }
+
+    public String getSubject(String tokenJWT){
+        try {
+            var algoritmo = Algorithm.HMAC256("12345678");
+            return JWT.require(algoritmo)
+                    .withIssuer("Feedback")
+                    .build()
+                    .verify(tokenJWT)
+                    .getSubject();
+        } catch (JWTVerificationException e) {
+            throw new RuntimeException("Token JWT invalido ou expirado. Erro: " + e);
         }
     }
 
