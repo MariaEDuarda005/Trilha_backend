@@ -29,7 +29,7 @@ public class TokenService {
 
     public String getSubject(String tokenJWT){
         try {
-            var algoritmo = Algorithm.HMAC256("12345678");
+            var algoritmo = Algorithm.HMAC256("123456789");
             return JWT.require(algoritmo)
                     .withIssuer("Feedback")
                     .build()
